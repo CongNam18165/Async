@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Async?Await</title>
+</head>
+
+<body>
+    <div class="container1">
+        <h1>Phép Cộng 2 số</h1>
+        <p>Xin mời nhập 2 số </p>
+        <div class="calculator">
+            <input class="input" /> <span class="icon"><i class="fa-solid fa-plus"></i></span><input class="input" />
+        </div>
+        <button class="button">Tính toán</button>
+        <div class="none loader"></div>
+        <p class="result"></p>
+    </div>
+    <div class="container2">
+        <div>
+            <h1> So sánh Promise và Async/Await</h1>
+        </div>
+        <div>
+
+            <h2>Giống nhau</h2>
+            <p class="p">Cả 2 đều xử lý những tác vụ không đồng bộ</p>
+            <h2>Khác nhau</h2>
+            <p>1.Async/Await được ra đời sau Promise.</p>
+            <p>2.Promise sử dụng .then() và .catch() xử lý kết quả thành công hoặc không của các tác vụ không đồng bộ
+                .Trong khi đó thì Async/Await có cấu trúc đơn giản hơn chỉ cần sử dụng khối try-catch và từ khóa "async" trước một hàm 
+            và từ khóa Await trong hàm đó để chờ cho đến khi 1 Promise được giải quyết</p>
+            <p>3.Khi sử dụng Async/Await, mã có thể trông giống như mã đồng bộ thông thường, giúp mã dễ đọc và dễ hiểu hơn so với Promise</p>
+            <h2>Ưu và nhược điểm</h2>
+            <h3>- Promise</h3>
+            <h4>+ Ưu điểm</h4>
+            <p> Dễ dàng kết hợp với các thư viện và công nghệ hỗ trợ Promise.</p>
+            <h4>+ Nhược điểm</h4>
+            <p>Phải sử dụng .then() và .catch() để xử lý kết quả và lỗi, gây ra một số callback hell, dẫn đến mã không rõ ràng và khó đọc.</p>
+            <h3>- Async/Await</h3>
+            <h4>+ Ưu điểm</h4>
+            <p> Dễ dàng kết hợp với các thư viện và công nghệ hỗ trợ Promise.</p>
+            <h4>+ Nhược điểm</h4>
+            <p>Cần sử dụng một số cú pháp khá phức tạp để sử dụng Async/Await.</p>
+            <p>Không hỗ trợ trên tất cả các trình duyệt</p>
+        </div>
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
