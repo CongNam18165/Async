@@ -37,7 +37,7 @@ async function fetchData() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         const data = { name: "John Doe", age: 30, city: "New York" };
-        return data;
+        return resolve(data);
       }, 2000);
     });
   }
@@ -54,5 +54,5 @@ async function fetchData() {
   }
   
   // Gọi hàm getUserData
-//   getUserData();
+  getUserData();
 //   console.log(fetchData())
