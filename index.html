@@ -31,21 +31,48 @@
             <h2>Khác nhau</h2>
             <p>1.Async/Await được ra đời sau Promise.</p>
             <p>2.Promise sử dụng .then() và .catch() xử lý kết quả thành công hoặc không của các tác vụ không đồng bộ
-                .Trong khi đó thì Async/Await có cấu trúc đơn giản hơn chỉ cần sử dụng khối try-catch và từ khóa "async" trước một hàm 
-            và từ khóa Await trong hàm đó để chờ cho đến khi 1 Promise được giải quyết</p>
-            <p>3.Khi sử dụng Async/Await, mã có thể trông giống như mã đồng bộ thông thường, giúp mã dễ đọc và dễ hiểu hơn so với Promise</p>
+                .Trong khi đó thì Async/Await có cấu trúc đơn giản hơn chỉ cần sử dụng khối try-catch và từ khóa "async"
+                trước một hàm
+                và từ khóa Await trong hàm đó để chờ cho đến khi 1 Promise được giải quyết</p>
+            <p>3.Khi sử dụng Async/Await, mã có thể trông giống như mã đồng bộ thông thường, giúp mã dễ đọc và dễ hiểu
+                hơn so với Promise</p>
             <h2>Ưu và nhược điểm</h2>
             <h3>- Promise</h3>
             <h4>+ Ưu điểm</h4>
+            <p> Có thể thực hiện nhiều tác vụ không đồng bộ song song 1 cách hiệu quả. </p>
             <p> Dễ dàng kết hợp với các thư viện và công nghệ hỗ trợ Promise.</p>
             <h4>+ Nhược điểm</h4>
-            <p>Phải sử dụng .then() và .catch() để xử lý kết quả và lỗi, gây ra một số callback hell, dẫn đến mã không rõ ràng và khó đọc.</p>
+            <p>Phải sử dụng .then() và .catch() để xử lý kết quả và lỗi, gây ra một số callback hell, dẫn đến mã không
+                rõ ràng và khó đọc.</p>
+            <p>Cú pháp dài dòng gây mất thời gian thực hiện </p>
             <h3>- Async/Await</h3>
+            <h4>+ Định nghĩa</h4>
+            <p> Async/Await là một tính năng của JavaScript giúp chúng ta làm việc với hàm bất đồng bộ theo ý muốn và dễ hiểu hơn và được xây dựng trên Promises</p>
             <h4>+ Ưu điểm</h4>
             <p> Dễ dàng kết hợp với các thư viện và công nghệ hỗ trợ Promise.</p>
+            <p> Với cú pháp tuần tự giống như khi viết mã đồng bộ thì giúp code dễ đọc và
+                giảm thiểu callback hell,code linh hoạt dễ dàng thực hiện các tác vụ phức tạp</p>
+            <p> Do hỗ trợ trực tiếp các giá trị Promise.Sử dụng await có thể nhận trực tiếp giá trị Promise trả về</p>
             <h4>+ Nhược điểm</h4>
             <p>Cần sử dụng một số cú pháp khá phức tạp để sử dụng Async/Await.</p>
             <p>Không hỗ trợ trên tất cả các trình duyệt</p>
+            <h2>Cách hoạt động</h2>
+            <p>*Promise:</p>
+            <p>- Khởi tạo 1 Promise bằng cú pháp new Promise. Promise sẽ nhận đối số là 1 hàm và hầm có 2 đối số là
+                resolve
+                và reject.</p>
+            <p>- Khi mà ta gọi resolve tức là tác vụ đúng và truyền đối số vào resolve thì code sẽ lọt vào.then()
+                và reject là khi tác vụ sai sẽ lọt vào .catch . và code nó sẽ luôn lọt vào .finally </p>
+            <p>- .catch,.then hay .finnally đều được nhận 1 dối số là 1 function và function này sẽ nhận được kết quả mà
+                resolve,reject đưa ra tương ứng</p>
+            <p>- .then có thể sử dụng được nối chuỗi để thực hiện các công việc 1 cách tuần tự </p>
+            <p>*Async/Await</p>
+            <p>- Để làm và hiểu được Async/Await thì chúng ta phải hiểu rõ Promises.</p>
+            <p>- Để tạo hàm bất đồng bộ thì chúng ta thêm "async" vào đầu function</p>
+            <p>- Bên trong function sẽ có khối try{...}catch{...}. Code sẽ được viết ở try và nếu lỗi sẽ lọt vào catch để xử lý cụ thể  </p>
+            <p>- Khi xử lý tác vụ không đồng bộ ở khối try gặp từ khóa await thì nó sẽ tạm dừng thực thi hàm và chờ đượi Promises được giải quyết.Và sau khi 
+                được giải quyết thì hàm async tiếp tục thực hiện đoạn code ở sau từ khóa await </p>
+                <p>- Từ khóa Await chỉ hoạt động với những tác vụ trả về 1 Promises. </p>
         </div>
     </div>
     </div>
